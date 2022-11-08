@@ -22,6 +22,10 @@ public class Main {
         EagerInitializedSingleton.getInstance();
         System.out.println(EagerInitializedSingleton.getInstance());
         EagerInitializedSingleton.printCiao();
+
+        System.out.println(UserFactory.createUser("normal"));
+
+        Computer buildPattern = new Computer.ComputerBuilder("this is required").build();
     }
 
     interface lambdaInterface {
