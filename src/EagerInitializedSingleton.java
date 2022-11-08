@@ -8,4 +8,12 @@ public class EagerInitializedSingleton {
         return instance;
     }
 
+    public static void printCiao() {
+        System.out.println("comes from singleton");
+    }
+
+    @Override
+    public String toString() {
+        return "EagerInitializedSingleton" + this.hashCode();
+    }
 }
