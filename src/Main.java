@@ -19,6 +19,8 @@ public class Main {
         //pass a lambda function as parameter
         lambdaInterface test = s -> s + '!';
         method("C", test);
+        EagerInitializedSingleton singleton = EagerInitializedSingleton.getInstance();
+        System.out.println(singleton.hashCode());
     }
 
     interface lambdaInterface {
@@ -29,3 +31,5 @@ public class Main {
         System.out.println(s1.ciao(s));
     }
 }
+
+
