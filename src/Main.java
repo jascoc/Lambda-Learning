@@ -14,13 +14,14 @@ public class Main {
         //method stored in a variable
         Consumer<String> lambdaMethod = s -> {System.out.println(s);};
         //basic lambda function
-        n.forEach( x -> {System.out.println(x);});
+        n.forEach(System.out :: println);
         strings.forEach(lambdaMethod);
         //pass a lambda function as parameter
         lambdaInterface test = s -> s + '!';
         method("C", test);
         EagerInitializedSingleton.getInstance();
         System.out.println(EagerInitializedSingleton.getInstance());
+        
         EagerInitializedSingleton.printCiao();
 
         System.out.println(UserFactory.createUser("normal"));
